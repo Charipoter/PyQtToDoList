@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>682</width>
+    <height>793</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QListWidget" name="eventList"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="addEventButton">
+       <property name="text">
+        <string>添加</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDockWidget" name="optinsWindow">
+       <widget class="QWidget" name="dockWidgetContents">
+        <widget class="QPushButton" name="changeTextButton">
+         <property name="geometry">
+          <rect>
+           <x>11</x>
+           <y>154</y>
+           <width>93</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>修改文字</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="removeEventButton">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>154</y>
+           <width>93</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>删除</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="completeEventButton">
+         <property name="geometry">
+          <rect>
+           <x>268</x>
+           <y>154</y>
+           <width>93</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>完成</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>397</x>
+           <y>154</y>
+           <width>60</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>当前索引</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="indexLabel">
+         <property name="geometry">
+          <rect>
+           <x>525</x>
+           <y>154</y>
+           <width>16</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="decreaseFontSizeButton">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>250</y>
+           <width>93</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>A-</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="increaseFontSizeButton">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>250</y>
+           <width>93</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>A+</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="fontSizeLabel">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>260</y>
+           <width>72</width>
+           <height>15</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>addEventButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>addEvent()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>59</x>
+     <y>398</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>37</x>
+     <y>545</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>eventList</sender>
+   <signal>doubleClicked(QModelIndex)</signal>
+   <receiver>Form</receiver>
+   <slot>openOptionsWindow()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>319</x>
+     <y>293</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>28</x>
+     <y>231</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>removeEventButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>removeEvent()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>177</x>
+     <y>609</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>33</x>
+     <y>622</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>changeTextButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>changeEventText()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>74</x>
+     <y>612</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>16</x>
+     <y>656</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>completeEventButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>completeEvent()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>325</x>
+     <y>607</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>9</x>
+     <y>519</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>decreaseFontSizeButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>decreaseEventFontSize()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>116</x>
+     <y>705</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>8</x>
+     <y>702</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>increaseFontSizeButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>increaseEventFontSize()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>303</x>
+     <y>702</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>9</x>
+     <y>740</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>addEvent()</slot>
+  <slot>openOptionsWindow()</slot>
+  <slot>removeEvent()</slot>
+  <slot>changeEventText()</slot>
+  <slot>completeEvent()</slot>
+  <slot>decreaseEventFontSize()</slot>
+  <slot>increaseEventFontSize()</slot>
+ </slots>
+</ui>
